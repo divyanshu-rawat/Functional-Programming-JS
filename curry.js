@@ -1,5 +1,5 @@
 // Curry is also a significant feature of functional programming.
-// Demo code originally comes from [mostly-adequate-guide](https://github.com/MostlyAdequate/mostly-adequate-guide).
+// Demo code originally comes from https://github.com/MostlyAdequate/mostly-adequate-guide.
 
 let add = function(x) {
   return function(y) {
