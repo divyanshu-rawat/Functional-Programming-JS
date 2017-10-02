@@ -7,4 +7,5 @@ function insertionSort(unsortedList) {
         }
         unsortedList[j + 1] = tmp;
     }
+    return unsortedList;
 }
