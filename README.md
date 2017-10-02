@@ -17,7 +17,9 @@
 #### Topics Covered 
 
 * This repo. js programs will take a close look at what I like to call the "big three" list operations: map, filter, and    
-  reduce.Wrapping your head around these three functions is an important step towards being able to write clean functional 
+  reduce.
+ 
+  Wrapping your head around these three functions is an important step towards being able to write clean functional 
   code, and opens the   doors to the vastly powerful techniques of functional and reactive programming.
   
 
