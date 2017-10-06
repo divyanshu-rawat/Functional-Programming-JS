@@ -20,12 +20,17 @@ function g(x) {
 function f(x) {
   return x.toString();
 }
+
 // y = (f ∘ g ∘ h)(1)
 const y = f(g(h(1)));
 console.log(y); // '4'
 
-//Or using R == Ramda
-const composite = R.compose(f, g, h);
+// By creating a compose higher order function
+const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)));
+
+// composite = f ∘ g ∘ h
+const composite = compose(f, g, h);
+
 // Execute single function to get the result.
-const c = composite(1);
-console.log(c); // '4'
+const result = composite(1);
+console.log(result); // '4'
