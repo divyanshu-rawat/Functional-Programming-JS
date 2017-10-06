@@ -1,3 +1,7 @@
+// The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. 
+// The default sort order is according to string Unicode code points.
+// REF: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
 const animals = [
   { name: 'Waffles', type: 'dog', age: 12 },
   { name: 'Fluffy', type: 'cat', age: 14 },
@@ -5,14 +9,18 @@ const animals = [
   { name: 'Hank', type: 'dog', age: 11 } 
 ];
 
-// sort to a -> z
-const sortres = animals.sort((a, b) => {
-const nameA = a.name.toLowerCase();//ignore uper/lowercase
-const nameB = b.name.toLowerCase();//ignore uper/lowercase
-if (nameA < nameB) return -1;
-if (nameA > nameB) return 1;
-// names must be equal
-return 0;
-})
+// Function to sort A -> Z
+const sortAnimals = animals.sort((a, b) => {
+  //Transform to lower case
 
-console.log(sortres)
+  const nameA = a.name.toLowerCase();
+  const nameB = b.name.toLowerCase();
+
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+
+  // Names must be equal
+  return 0;
+});
+
+console.log(sortAnimals);
