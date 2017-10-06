@@ -5,5 +5,16 @@ function initialize() {
 	}
 	displaySummary();
 }
-initialize();
+initialize(); 	// 'The name of the project is Functional Programming in JS'
 
+function multiplier(x) {
+	return function(y) {
+		return x * y
+	}
+}
+
+var multi2 = multiplier(2);
+var multi3 = multiplier(3);
+
+console.log(multi2(4))	//8
+console.log(multi3(3)) //9
